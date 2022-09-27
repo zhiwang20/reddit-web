@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Features
+
+- Authentication using Amazon Cognito
+- Database using DynamoDB
+- GraphQL API using Amazon AppSync
+- Storage for images using S3 Buckets
+- AWS Amplify SSR using withSSRContext
+- Next JS version 10+
+- Static Site Generation,
+- Incremental Static Regeneration
+- Server-side Rendering
+- Next JS Image Component
 
 ## Getting Started
 
