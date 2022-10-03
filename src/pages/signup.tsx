@@ -15,7 +15,6 @@ interface IFormInput {
 }
 
 export default function Signup() {
-  // const { user, setUser } = useUser();
   const { user } = useUser();
   const router = useRouter();
   const [open, setOpen] = useState(false);

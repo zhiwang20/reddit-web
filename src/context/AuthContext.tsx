@@ -7,8 +7,8 @@ import {
   useEffect,
   useState,
 } from "react";
-import Auth, { CognitoUser } from "@aws-amplify/auth";
-import { Hub } from "aws-amplify";
+import { CognitoUser } from "@aws-amplify/auth";
+import { Auth, Hub } from "aws-amplify";
 
 interface UserContextType {
   user: CognitoUser | null;
@@ -30,7 +30,7 @@ export default function AuthContext({ children }: Props): ReactElement {
 
   useEffect(() => {
     Hub.listen("auth", () => {
-      // Perform some action to update state whenever an auth event is detected.
+      // perform some action to update state whenever an auth event is detected.
       checkUser();
     });
   }, []);
@@ -38,11 +38,10 @@ export default function AuthContext({ children }: Props): ReactElement {
   async function checkUser() {
     try {
       const amplifyUser = await Auth.currentAuthenticatedUser();
-      if (amplifyUser) {
-        setUser(amplifyUser);
-      }
+      setUser(amplifyUser);
     } catch (error) {
-      // No current signed in User
+      // No current signed in user.
+      console.error(error);
       setUser(null);
     }
   }
