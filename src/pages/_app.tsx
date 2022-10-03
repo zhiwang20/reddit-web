@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Header from "../components/Header";
 import theme from "../theme";
 import type { AppProps } from "next/app";
 import Amplify from "aws-amplify";
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
+          <Header />
           <Component {...pageProps} />
         </ThemeProvider>
       </AuthContext>
