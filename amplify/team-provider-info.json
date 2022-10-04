@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "redditweb4fde864a": {}
+        "redditweb4fde864a": {},
+        "true": {}
       }
     }
   }
